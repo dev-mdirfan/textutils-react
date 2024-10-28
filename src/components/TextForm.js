@@ -126,7 +126,7 @@ export default function TextForm({ heading, boxHeading = "Enter Your Text Here",
                 <h5>Your Text Summary:</h5>
                 <div className='mx-3'>
                     <p>
-                        {text.split(' ').filter(word => word.trim().length > 0).length} Words,
+                        {text.split(/\s+/).filter(word => word.trim().length > 0).length} Words,
                         {text.length} Characters,
                         {text.split('\n').length} Lines,
                         {text.split('.').filter(sentence => sentence.trim().length > 0).length} Sentences
