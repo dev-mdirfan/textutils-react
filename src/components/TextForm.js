@@ -104,32 +104,25 @@ export default function TextForm({ heading, boxHeading = "Enter Your Text Here",
 
     return (
         <>
-            <div className='container my-3' style={{color: mode === 'light' ? 'black' : 'white'}}>
+            <div className='container my-3' style={{ color: mode === 'light' ? 'black' : 'white' }}>
                 <h3>{heading}</h3>
+                <p>Word Counter, Character Counter, line counter, sentence counter, Remove Extra Spaces, Convert your text from uppercase to lowercase or lowercase to uppercase, capitalize the text and Read the text aloud etc.</p>
                 <div className="mb-3">
                     <label htmlFor="textBox" className="form-label">{boxHeading}</label>
-                    <textarea className="form-control" value={text} onChange={handleOnChange} id="textBox" rows="10" style={{backgroundColor: mode === 'light' ? 'white' : '#343a40', color: mode === 'light' ? 'black' : 'white'}}></textarea>
+                    <textarea className="form-control" value={text} onChange={handleOnChange} id="textBox" rows="10" style={{ backgroundColor: mode === 'light' ? 'white' : '#343a40', color: mode === 'light' ? 'black' : 'white' }}></textarea>
                 </div>
                 <div>
                     <h5 className='my-3'>Convert to:</h5>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-6 d-flex justify-content-start">
-                                <button className="btn btn-primary mx-1" onClick={handleUpClick}>Uppercase</button>
-                                <button className="btn btn-primary mx-1" onClick={handleLowClick}>Lowercase</button>
-                                <button className="btn btn-primary mx-1" onClick={handleCapClick}>Capitalize</button>
-                                <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
-                            </div>
-                            <div className="col-md-6 d-flex justify-content-end">
-                                <button className="btn btn-outline-secondary mx-1" onClick={clearText}>Clear Text</button>
-                                <button className="btn btn-warning mx-1" onClick={speak} id="toggle">Speak</button>
-                                <button className="btn btn-info mx-1" onClick={handleCopyClick}>Copy to Clipboard</button>
-                            </div>
-                        </div>
-                    </div>
+                    <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Uppercase</button>
+                    <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleLowClick}>Lowercase</button>
+                    <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleCapClick}>Capitalize</button>
+                    <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+                    <button disabled={text.length===0} className="btn btn-outline-secondary mx-1 my-1" onClick={clearText}>Clear Text</button>
+                    <button disabled={text.length===0} className="btn btn-warning mx-1 my-1" onClick={speak} id="toggle">Speak</button>
+                    <button disabled={text.length===0} className="btn btn-info mx-1 my-1" onClick={handleCopyClick}>Copy to Clipboard</button>
                 </div>
             </div>
-            <div className="container my-3" style={{color: mode === 'light' ? 'black' : 'white'}}>
+            <div className="container my-3" style={{ color: mode === 'light' ? 'black' : 'white' }}>
                 <h5>Your Text Summary:</h5>
                 <div className='mx-3'>
                     <p>
@@ -142,16 +135,16 @@ export default function TextForm({ heading, boxHeading = "Enter Your Text Here",
                 </div>
             </div>
 
-            <div className='container my-3' style={{color: mode === 'light' ? 'black' : 'white'}}>
+            <div className='container my-3' style={{ color: mode === 'light' ? 'black' : 'white' }}>
                 <h5>Preview:</h5>
                 <div className='mx-3'>
                     <details>
                         <summary>Preview Text</summary>
-                        <p>{text.length > 0 ? text : "Enter text to preview here"}</p>
+                        <p>{text.length > 0 ? text : "Nothing to Preview!"}</p>
                     </details>
                 </div>
             </div>
-            <div className='container my-3' style={{color: mode === 'light' ? 'black' : 'white'}}>
+            <div className='container my-3' style={{ color: mode === 'light' ? 'black' : 'white' }}>
                 <h5>Example Texts:</h5>
                 <div className='mx-3'>
                     <div className=''>

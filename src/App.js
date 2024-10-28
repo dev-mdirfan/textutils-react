@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import About from './components/About';
+import Aboutprev from './components/Aboutprev';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
@@ -49,9 +50,11 @@ function App() {
           <Routes>
             {/* /users --> component 1
             /users/contact --> component 2 */}
-            <Route exact path="/" element={<TextForm heading="Text Analyzer App" boxHeading="Write your desired text here to analyze the text:" mode={mode} showAlert={showAlert} />}>
+            <Route exact path="/" element={<TextForm heading="TextUtils - Text Analyzer App" boxHeading="Write your desired text here to analyze the text:" mode={mode} showAlert={showAlert} />}>
             </Route>
-            <Route exact path="/about" element={<About />}>
+            <Route exact path="/about" element={<About mode={mode} />}>
+            </Route>
+            <Route exact path="/about-previous" element={<Aboutprev />}>
             </Route>
           </Routes>
         </div>

@@ -5,20 +5,24 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Project Features
 
-`textutils` is a text analyze web app using react.js.
+`textutils` : A text semantic checker and manipulator / analyzer.
 
-- how many numbers of words, characters, lines, sentences.
-- Capitalize / Lower Case / Upper Case
-- Space remove.
 
-1. Text to speech using react-speech
-2. Find and replace
-3. Remove extra spaces
+- It is a text analyze web app using react.js.
+
+
+1. Capitalize / Lower Case / Upper Case
+2. Remove extra spaces and tabs
+3. Text to speech using react-speech
+4. How many numbers of words, characters, lines, sentences.
+5. Find and replace
+
 
 **Tech Stacks**:
 
 - Bootstrap 5
-- 
+- React
+- React Router DOM
 
 
 ## Available Scripts
